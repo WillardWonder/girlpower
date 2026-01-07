@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // GitHub Pages SPA redirect
+      const base = "/girlpower/";
+      const path = location.pathname;
+      if (path.startsWith(base)) {
+        const newUrl = base + "#/" + path.slice(base.length) + location.search + location.hash;
+        location.replace(newUrl);
+      } else {
+        location.replace(base);
+      }
+    </script>
+  </head>
+  <body>Redirecting…</body>
+</html>
